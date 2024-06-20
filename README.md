@@ -1,4 +1,4 @@
-# mygorm
+# mygorm 0620
 
 #### 介绍
 gorm simple package
