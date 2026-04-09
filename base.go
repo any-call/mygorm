@@ -21,7 +21,7 @@ func ExclusiveLock(tx *gorm.DB) *gorm.DB {
 	})
 }
 
-func InSet(field string, values []string) func(db *gorm.DB) *gorm.DB {
+func InSetWithOR(field string, values []string) func(db *gorm.DB) *gorm.DB {
 	return func(db *gorm.DB) *gorm.DB {
 		if len(values) == 0 || strings.TrimSpace(field) == "" {
 			return db
