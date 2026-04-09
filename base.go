@@ -21,6 +21,7 @@ func ExclusiveLock(tx *gorm.DB) *gorm.DB {
 	})
 }
 
+// inSetWithOR 支持多值 OR 的 FIND_IN_SET 查询。
 func InSetWithOR(field string, values []string) func(db *gorm.DB) *gorm.DB {
 	return func(db *gorm.DB) *gorm.DB {
 		if len(values) == 0 || strings.TrimSpace(field) == "" {
